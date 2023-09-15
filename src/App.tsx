@@ -1,9 +1,8 @@
 import './App.css'
 // import Prueba from './Prueba1'
 // import Prueba from './Prueba2'
-// import Prueba from './Prueba4'
-// import Prueba from './Prueba5'
-import Prueba from './Prueba6'
+// import Prueba from './Prueba3'
+import Prueba from './Prueba7'
 
 const App = () => {
   return (
