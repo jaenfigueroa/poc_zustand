@@ -1,16 +1,14 @@
 import './App.css'
-import Prueba1 from './Prueba1'
-// import Prueba2 from './Prueba2'
-// import Prueba4 from './Prueba4'
-// import Prueba5 from './Prueba5'
+// import Prueba from './Prueba1'
+// import Prueba from './Prueba2'
+// import Prueba from './Prueba4'
+// import Prueba from './Prueba5'
+import Prueba from './Prueba6'
 
 const App = () => {
   return (
     <div className='app'>
-      <Prueba1 />
-      {/* <Prueba2 /> */}
-      {/* <Prueba4 /> */}
-      {/* <Prueba5 /> */}
+      <Prueba />
     </div>
   )
 }
