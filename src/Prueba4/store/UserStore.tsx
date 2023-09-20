@@ -5,35 +5,37 @@ type State = {
   user: {
     name: string
     lastName: string
+    age: number
   }
-  animal: {
+  pet: {
     name: string
     age: number
   }
 }
 
 type Actions = {
-  updateNameUser: (newName: State['user']['name']) => void
-  updateAgeAnimal: (newAge: State['animal']['age']) => void
+  updateUserName: (newName: State['user']['name']) => void
+  updatePetAge: (newAge: State['pet']['age']) => void
 }
 
-export const useUserStore = create(
+export const useExampleStore = create(
   immer<State & Actions>((set) => ({
     user: {
       name: '',
       lastName: '',
+      age: 0,
     },
-    animal: {
+    pet: {
       name: '',
       age: 0,
     },
-    updateNameUser: (newName: State['user']['name']) =>
+    updateUserName: (newName: State['user']['name']) =>
       set((state) => {
         state.user.name = newName
       }),
-    updateAgeAnimal: (newAge: State['animal']['age']) =>
+    updatePetAge: (newAge: State['pet']['age']) =>
       set((state) => {
-        state.animal.age = newAge
+        state.pet.age = newAge
       }),
   }))
 )

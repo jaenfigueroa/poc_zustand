@@ -1,21 +1,21 @@
-import { useUserStore } from '../store/UserStore'
+import { useExampleStore } from '../store/UserStore'
 
 const Control = () => {
-  const userName = useUserStore((state) => state.user.name)
-  const lastname = useUserStore((state) => state.animal.age)
-  const updateName = useUserStore((state) => state.updateNameUser)
-  const animalAge = useUserStore((state) => state.updateAgeAnimal)
+  const userName = useExampleStore((state) => state.user.name)
+  const petAge = useExampleStore((state) => state.pet.age)
+  const updateUserName = useExampleStore((state) => state.updateUserName)
+  const updateAgePet = useExampleStore((state) => state.updatePetAge)
 
   return (
     <>
-      Actualiza nombre
-      <input type='text' onChange={(e) => updateName(e.currentTarget.value)} value={userName} />
-      <hr />
-      Actualiza apellido
+      <p>Actualiza nombre de usuario</p>
+      <input type='text' onChange={(e) => updateUserName(e.currentTarget.value)} value={userName} />
+
+      <p>Actualiza edad de mascota</p>
       <input
         type='number'
-        onChange={(e) => animalAge(Number(e.currentTarget.value))}
-        value={lastname}
+        onChange={(e) => updateAgePet(Number(e.currentTarget.value))}
+        value={petAge}
       />
     </>
   )

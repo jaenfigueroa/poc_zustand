@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { createSelectors } from './createSelectors'
+import { createSelectors } from './createSelectors--normal'
 
 type State = {
   bears: number

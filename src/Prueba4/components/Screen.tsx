@@ -1,13 +1,13 @@
-import { useUserStore } from '../store/UserStore'
+import { useExampleStore } from '../store/UserStore'
 
 const Screen = () => {
-  const userName = useUserStore((state) => state.user.name)
-  const animalAge = useUserStore((state) => state.animal.age)
+  const userName = useExampleStore((state) => state.user.name)
+  const petAge = useExampleStore((state) => state.pet.age)
 
   return (
     <>
-      <p>Nombre usuario: {userName}</p>
-      <p>Edad animal: {animalAge}</p>
+      <p>Nombre de usuario: {userName}</p>
+      <p>Edad de mascota: {petAge}</p>
     </>
   )
 }
